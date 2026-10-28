@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{3C6EE08A-E6D9-4222-8632-3CCC5F74289E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Display_test</RootNamespace>
+    <AssemblyName>Display test</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CefSharp.WinForms">
+      <Version>117.2.40</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChromiumLifeSpanHandler.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InActivityWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InActivityWindow.Designer.cs">
+      <DependentUpon>InActivityWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InActivityWindow.resx">
+      <DependentUpon>InActivityWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\20220405_134407.jpg" />
+    <None Include="Resources\20220405_134513.jpg" />
+    <None Include="Resources\3.png" />
+    <None Include="Resources\Add a heading (1).png" />
+    <None Include="Resources\Add a heading.png" />
+    <None Include="Resources\alumni_spotlight.png" />
+    <None Include="Resources\Back.png" />
+    <None Include="Resources\back2.png" />
+    <None Include="Resources\backbutton.png" />
+    <None Include="Resources\backbutton_grayed.png" />
+    <None Include="Resources\backgroundFisher (1).png" />
+    <None Include="Resources\backgroundFisher (2).png" />
+    <None Include="Resources\backgroundFisher (4).png" />
+    <None Include="Resources\backgroundFisher (5).png" />
+    <None Include="Resources\backgroundFisher.png" />
+    <None Include="Resources\backgroundFisherWashOutMore.png" />
+    <None Include="Resources\Black and white history.png" />
+    <None Include="Resources\Black and white history1.png" />
+    <None Include="Resources\CBALogo.png" />
+    <None Include="Resources\CBALogo2.png" />
+    <None Include="Resources\Directory.png" />
+    <None Include="Resources\Executive Education (1).png" />
+    <None Include="Resources\Executive Education.png" />
+    <None Include="Resources\Executive.png" />
+    <None Include="Resources\experience_business.png" />
+    <None Include="Resources\facebook.png" />
+    <None Include="Resources\Fisher.png" />
+    <None Include="Resources\Fisher2.png" />
+    <None Include="Resources\Fisherlogo.png" />
+    <None Include="Resources\Fisherlogo1.png" />
+    <None Include="Resources\Graduate.png" />
+    <None Include="Resources\Graduate2.png" />
+    <None Include="Resources\Graduate3.png" />
+    <None Include="Resources\History.png" />
+    <None Include="Resources\History3.png" />
+    <None Include="Resources\homebutton.png" />
+    <None Include="Resources\IMG_3047.jpg" />
+    <None Include="Resources\instagram.png" />
+    <None Include="Resources\leftarrow.png" />
+    <None Include="Resources\marketing.png" />
+    <None Include="Resources\marketinglogo.png" />
+    <None Include="Resources\MicrosoftTeams-image (1).jpg" />
+    <None Include="Resources\MicrosoftTeams-image (2).jpg" />
+    <None Include="Resources\MicrosoftTeams-image (3).png" />
+    <None Include="Resources\MicrosoftTeams-image (4).jpg" />
+    <None Include="Resources\MicrosoftTeams-image-rs.png" />
+    <None Include="Resources\MicrosoftTeams-image-rs2.png" />
+    <None Include="Resources\MicrosoftTeams-image.png" />
+    <None Include="Resources\news and events.png" />
+    <None Include="Resources\News and Events2.png" />
+    <None Include="Resources\Partners.png" />
+    <None Include="Resources\Partners1.png" />
+    <None Include="Resources\PD Picture.png" />
+    <None Include="Resources\PD.png" />
+    <None Include="Resources\polsky.jpg" />
+    <None Include="Resources\Programs.png" />
+    <None Include="Resources\Programs1.png" />
+    <None Include="Resources\Programs2.png" />
+    <None Include="Resources\re-sized.png" />
+    <None Include="Resources\rightarrow.png" />
+    <None Include="Resources\semitransparent.png" />
+    <None Include="Resources\social_media.png" />
+    <None Include="Resources\Test1.png" />
+    <None Include="Resources\Top Text3.png" />
+    <None Include="Resources\Top Text5.png" />
+    <None Include="Resources\TopText4.png" />
+    <None Include="Resources\touch.png" />
+    <None Include="Resources\twitter.png" />
+    <None Include="Resources\UAWordmark_gold.png" />
+    <None Include="Resources\UAWordmark_gold1.png" />
+    <None Include="Resources\Undergrad.png" />
+    <None Include="Resources\undergraduate2.png" />
+    <None Include="Resources\undergraduate3.png" />
+    <None Include="Resources\Untitled design (1).png" />
+    <None Include="Resources\Untitled design.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
