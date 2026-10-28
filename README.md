@@ -1,7 +1,7 @@
-# Fisher Display Screen — source
+# Fisher Display Screen
 
 C# source for `Display test.exe`, the College of Business marketing touchscreen kiosk.
-It was reconstructed from the compiled Release build in the repo root, since the original project wasn't checked in.
+It was reconstructed from the compiled Release build, since the original project wasn't checked in. That build is kept on the `old` branch.
 
 ## What it does
 
@@ -18,7 +18,13 @@ It was reconstructed from the compiled Release build in the repo root, since the
 2. Restore NuGet packages. The project uses `CefSharp.WinForms` 117.2.40, the same version as the shipped build.
 3. Build **Release | x64**.
 
-The output in `bin\x64\Release\` replaces the files in the repo root.
+The output in `bin\x64\Release\` is the complete app: the same set of files as the `old` branch.
+
+## Deploy
+
+The kiosk is a Linux box that runs the exe under Wine. `run.sh` starts it full-screen in a KWin Wayland session and relaunches it if it exits with an error. It expects the Release folder at `/home/cobkiosk/Desktop/Release`.
+
+To update the kiosk, copy everything from `bin\x64\Release\` into that folder.
 
 ## Notes on the reconstruction
 
